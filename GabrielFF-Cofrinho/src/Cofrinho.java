@@ -12,6 +12,10 @@ public class Cofrinho {
         this.listaMoedas.add(moeda);
     }
 
+    public boolean remover(Moeda moeda) {
+        return this.listaMoedas.remove(moeda);
+    }
+
     public void listagemMoedas() {
 
         if(this.listaMoedas.isEmpty()) {
@@ -22,6 +26,21 @@ public class Cofrinho {
         for(Moeda moeda: this.listaMoedas){
             moeda.info();
         }
+    }
+
+    public double totalConvertido() {
+        
+        if (this.listaMoedas.isEmpty()) {
+            return 0;
+        }
+
+        double valorAcumulado = 0;
+
+        for (Moeda moeda : this.listaMoedas){
+            valorAcumulado = valorAcumulado + moeda.converter();
+        }
+
+        return valorAcumulado;
     }
 
 }

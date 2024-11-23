@@ -14,4 +14,19 @@ public class Euro extends Moeda{
         return this.valor * 6;
     }
     
+    @Override
+    public boolean equals(Object objeto) {
+        if (this.getClass() != objeto.getClass()) {
+            return false;
+        }
+
+        Euro objetoDeEuro = (Euro) objeto;
+
+        if (this.valor != objetoDeEuro.valor) {
+            return false;
+        }
+
+        return true;
+    }
+
 }
