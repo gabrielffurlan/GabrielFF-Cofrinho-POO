@@ -10,8 +10,11 @@ public class Menu {
         cofrinho = new Cofrinho();
     }
 
-    public void exibirMenuPrincipal() {
-        System.out.println("COFRINHO");
+    public void exibirMenuPrincipal() { //MENU PRINCIPAL
+        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        System.out.println("COFRINHO - GABRIEL FONTES FURLAN - RU: 4822969");
+        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        System.out.println("Escolha a opção desejada abaixo: ");
         System.out.println("1 - Adicionar moeda");
 		System.out.println("2 - Remover moeda");
 		System.out.println("3 - Listar moedas");
@@ -20,30 +23,30 @@ public class Menu {
 
         String opcaoSelecionada = sc.next();
 
-        switch (opcaoSelecionada) {
+        switch (opcaoSelecionada) { //Opções em que chamam os métodos
 
-            case "0":
+            case "0": //Encerra programa
                 System.out.println("Finalizando ...");             
                 break;
 
-            case "1":
+            case "1": //Adiciona moeda
                 exibirSubMenuAdd();
                 exibirMenuPrincipal();                
                 break;
 
-            case "2":
+            case "2": //Remove moeda
                 exibirSubMenuRemover();
                 exibirMenuPrincipal();                
                 break;
             
-            case "3":
+            case "3": //Lista moeda
                 cofrinho.listagemMoedas();
                 exibirMenuPrincipal();
                 break;
             
-            case "4":
+            case "4": //Converte para Real
                 double valorTotalConvertido = cofrinho.totalConvertido();
-                System.out.println("O valor total convertido em real é: " + valorTotalConvertido);
+                System.out.println("O valor total convertido em real é: R$ " + valorTotalConvertido);
                 exibirMenuPrincipal();
                 break;
                 
@@ -55,8 +58,8 @@ public class Menu {
 
 
     }
-    private void exibirSubMenuAdd() {
-        System.out.println("Escolha Moeda:");
+    private void exibirSubMenuAdd() { //SUB MENU ADICIONAR
+        System.out.println("Escolha a Moeda:");
         System.out.println("1 - Real");
         System.out.println("2 - Dolar");
         System.out.println("3 - Euro");
@@ -72,7 +75,7 @@ public class Menu {
 
         Moeda moeda = null;
 
-        if (opcaoMoeda == 1) {
+        if (opcaoMoeda == 1) { 
             moeda = new Real(valorMoeda);
         }
         else if (opcaoMoeda == 2) {
@@ -90,8 +93,8 @@ public class Menu {
         System.out.println("Moeda adicionada!");
     }
 
-    private void exibirSubMenuRemover() {
-        System.out.println("Escolha Moeda:");
+    private void exibirSubMenuRemover() { //SUB MENU REMOVER
+        System.out.println("Escolha a Moeda:");
         System.out.println("1 - Real");
         System.out.println("2 - Dolar");
         System.out.println("3 - Euro");

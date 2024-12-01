@@ -8,15 +8,15 @@ public class Cofrinho {
         this.listaMoedas = new ArrayList<>();
     }
 
-    public void adicionar(Moeda moeda) {
+    public void adicionar(Moeda moeda) { //Adiciona moeda na lista
         this.listaMoedas.add(moeda);
     }
 
-    public boolean remover(Moeda moeda) {
+    public boolean remover(Moeda moeda) { //Remove moeda da lista
         return this.listaMoedas.remove(moeda);
     }
 
-    public void listagemMoedas() {
+    public void listagemMoedas() { //Exibe moedas
 
         if(this.listaMoedas.isEmpty()) {
             System.out.println("Não existe nenhuma moeda no cofrinho!");
@@ -28,7 +28,7 @@ public class Cofrinho {
         }
     }
 
-    public double totalConvertido() {
+    public double totalConvertido() { //Converte moedas 
         
         if (this.listaMoedas.isEmpty()) {
             return 0;

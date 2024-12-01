@@ -1,4 +1,4 @@
-public class Real extends Moeda{
+public class Real extends Moeda{ //Classe filha de Moeda
 
     public Real(double valorInicial){
         this.valor = valorInicial;
@@ -6,7 +6,7 @@ public class Real extends Moeda{
 
     @Override
     public void info() {
-        System.out.println("Real - " + valor);
+        System.out.println("Real  -> " + valor);
     }
 
     @Override

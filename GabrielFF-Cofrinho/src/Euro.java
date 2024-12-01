@@ -1,4 +1,4 @@
-public class Euro extends Moeda{
+public class Euro extends Moeda{ //Classe filha de Moeda
     
     public Euro(double valorInicial){
         this.valor = valorInicial;
@@ -6,12 +6,12 @@ public class Euro extends Moeda{
 
     @Override
     public void info() {
-        System.out.println("Euro - " + valor);
+        System.out.println("Euro  -> " + valor);
     }
 
     @Override
     public double converter() {
-        return this.valor * 6;
+        return this.valor * 6.3;
     }
     
     @Override
